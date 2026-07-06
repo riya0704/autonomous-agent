@@ -1,0 +1,18 @@
+### Health check
+GET http://127.0.0.1:8000/
+
+### Test 1: standard business request
+POST http://127.0.0.1:8000/agent
+Content-Type: application/json
+
+{
+  "request": "Create a project proposal for an AI attendance system for a university. Include objectives, scope, a six-week timeline, roles, risks, and success metrics."
+}
+
+### Test 2: complex and ambiguous request
+POST http://127.0.0.1:8000/agent
+Content-Type: application/json
+
+{
+  "request": "Prepare a launch plan for an AI startup in India under INR 5 lakh. We want to launch as quickly as possible but also require strong governance. Dates, team size, and target customer segment are missing. Decide reasonable assumptions, resolve the speed-versus-governance tension, and include a phased roadmap, owners, estimated costs, risks, and measurable success criteria."
+}
